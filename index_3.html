@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset ="UTF-8">
+        <title> сайт</title>
+    </head>
+    
+    <body>
+        <h1>добро пожаловать</h1>
+        
+        <p>выберите картинку которая вам нравится больше</p>
+        
+        <img id="carImg"
+        src ="https://avatars.mds.yandex.net/i?id=5698f3b8e811eaaa16a874dfe0f2ff40_l-3915061-images-thumbs&n=13" alt ="вариант 1" width="300">
+        
+        
+        
+        <img id="carImg" src="https://adsboard-static.spectrumdata.tech/images/d9/d994eb2b-c7b0-4532-8fa9-1f6f1c0b71c8.jpg" alt="вариант 2" width="300">
+        <img id="carImg" src="https://avatars.mds.yandex.net/get-entity_search/1727263/1219543076/S600xU_2x" width ="300">
+        
+        <select id ="carSelect" onchange="redirectToSite()">
+            <option value=""> выберите машину </option>
+            <option value ="https://ru.wikipedia.org/wiki/Ford_Mondeo">Мондео</option>
+            <option value ="https://ru.wikipedia.org/wiki/LADA_Priora">приора</option>
+            <option value="https://ru.wikipedia.org/wiki/Audi_A4">Ауди a4</option>
+        </select>
+        
+        <script>
+            function redirectToSite(){
+                const select = document.getElementById("carSelect")
+                const selectedUrl = select.value;
+                
+                if(selectedUrl) {
+                    window.location.href = selectedUrl;
+                }
+            }
+        </script>
+        
+    </body>
+</html>
